@@ -6,6 +6,7 @@ class ListsController < ApplicationController
   def show
     @list = List.find(params[:id])
     @bookmarks = Bookmark.where(list_id: @list.id)
+    @movies = Movie.all
   end
 
   def new
@@ -33,8 +34,11 @@ class ListsController < ApplicationController
 
   def destroy
     @list = List.find(params[:id])
-    @list.delete
-    redirect_to root_path
+    if @list.delete
+      redirect_to root_path
+    else
+      render :show
+    end
   end
 
   private
