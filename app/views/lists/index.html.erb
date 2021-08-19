@@ -1,0 +1,11 @@
+Welcome to the lists!
+
+<ul>
+  <% @lists.each do |list| %>
+    <%= link_to list.name, list_path(list.id) %>
+  <% end %>
+</ul>
+
+
+
+<%= link_to 'Add list', new_list_path %>
