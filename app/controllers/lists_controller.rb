@@ -34,6 +34,8 @@ class ListsController < ApplicationController
 
   def destroy
     @list = List.find(params[:id])
+    @bookmarks = Bookmark.where(list_id: @list.id)
+    @bookmarks.delete_all
     if @list.delete
       redirect_to root_path
     else
