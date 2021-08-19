@@ -5,14 +5,14 @@
   </div>
 </div>
 
-
-
-<ul>
-  <% @lists.each do |list| %>
-    <%= link_to list.name, list_path(list.id) %>
-  <% end %>
-</ul>
-
-
-
-<%= link_to 'Add list', new_list_path %>
+<div class="container mt-3">
+  <ul class="list-grid">
+    <% @lists.each do |list| %>
+      <li>
+        <div class="card-category">
+          <%= link_to list.name, list_path(list.id) %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
