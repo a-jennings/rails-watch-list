@@ -10,9 +10,12 @@
   <ul class="list-grid">
     <% @lists.each do |list| %>
       <li>
+        <%= link_to list_path(list.id) do  %>
         <div class="card-category">
-          <%= link_to list.name, list_path(list.id) %>
+          <%=list.name %>
         </div>
+        <% end %>
+
       </li>
     <% end %>
   </ul>
