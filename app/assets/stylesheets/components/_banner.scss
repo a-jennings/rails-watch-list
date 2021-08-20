@@ -1,7 +1,7 @@
 .banner {
   background-size: cover;
   background-position: bottom;
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('banner.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), asset-url('banner.png');
   padding: 200px 0;
 }
 

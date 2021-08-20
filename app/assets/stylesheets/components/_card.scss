@@ -1,7 +1,7 @@
 .card-category {
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("card_default.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url("card_default.jpg");
   height: 180px;
   display: flex;
   justify-content: center;
