@@ -1,7 +1,7 @@
 require 'open-uri'
 require 'json'
 
-10.times do |num|
+100.times do |num|
   url = "http://tmdb.lewagon.com/movie/top_rated?page=#{num + 1}"
   movies_serialized = URI.open(url).read
   movies = JSON.parse(movies_serialized)
